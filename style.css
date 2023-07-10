@@ -1,0 +1,25 @@
+.label{
+    display: block;
+    width: 45px;
+    height: 25px;
+    border: 1px solid red;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+}
+.label::before{
+    content: "";
+    width: 23px;
+    height: 23px;
+    background-color: green;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(2px, -50%);
+    transition: all .1s ease;
+}
+.input:checked+label::before{
+    transform: translate(90%, -50%); 
+
+}
